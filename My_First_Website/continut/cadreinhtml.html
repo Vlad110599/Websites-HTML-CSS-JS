@@ -1,0 +1,104 @@
+<html>
+<head>
+<title></title>
+</head>
+<body> 
+<b><div align="center"><font color="green" size="+3"><u>Cadre in HTML</u></font></div></b></br>
+<br>
+<br>
+<b><font size="+1">Ferestrele sau (cadrele) ne permit sa definim in fereastra browserului 
+subferstre in care sa fie incarcate documente HTML diferite. Ferestrele sunt definite intr-un fisier HTML special , 
+in care blocul <textarea cols="15" rows="1"><body>...</body></textarea> este inlocuit de blocul <textarea cols="23" rows="1"><frameset>...</frameset></textarea>.  in interiorul acestui bloc, 
+fiecare cadru este introdus prin eticheta <textarea cols="6" rows="1"><frame></textarea>.</font></b><br>
+<br>
+<b><font size="+1">Un atribut obligatoriu al etichetei <textarea cols="6" rows="1"><frame></textarea> este src, care primeste ca valoare adresa URL a documentului HTML care va fi incarcat in acel frame. Definirea cadrelor se face 
+prin impartirea ferestrelor (si a subferestrelor) in linii si coloane:</font></b></br>
+<b><font size="+1"><li>impartirea unei ferestre intr-un numar de subferestre de tip coloana se face cu ajutorul atributului cols al etichetei <textarea cols="9" rows="1"><frameset></textarea> ce descrie acea fereastra;</li>
+<li>impartirea unei ferestre intr-un numar de subferestre de tip linie se face cu ajutorul atributului rows al etichetei <textarea cols="9" rows="1"><frameset></textarea> ce descrie acea fereastra;</li>
+<li>valoarea atributelor cols si rows este o lista de elemente separate prin virgula , care descriu modul in care se face impartirea.</li></font></b></br>
+<b><font size="+1">Elementele listei pot fi:</font></b></br>
+<b><font size="+1"><li>un numar intreg de pixeli;</li></font></b>
+<b><font size="+1"><li>procente din dimensiunea ferestrei (numar intre 1 si 99 terminat cu %);</li></font></b>
+<b><font size="+1"><li>n* care inseamna n parti din spatiul ramas;</li></font></b></br>
+<b><font size="+1">Exemplu 1:   cols = 200, *, 50%, *  inseamna o impartire in 4 subferestre , dintre care prima are 200 pixeli , a treia ocupa jumatate din spatiul total disponibil, iar a doua si a patra ocupa in mod egal 
+restul de spatiu ramas disponibil. </font></b></br>
+<b><font size="+1">Exemplu 2:   cols = 200, 1*, 50%, 2*  inseamna  o  impartire  in 4  subferestre, dintre  care  prima are 200 pixeli , a treia ocupa jumatate din spatiul  total disponibil iar a doua si a patra ocupa  in mod egal 
+restul de spatiu ramas disponibil, care se imparte in  trei parti egale, a  doua  fereastra ocupand o parte, iar a patra ocupand 2 parti.</font></b><br>
+<br>
+<b><font size="+1"><u>Observatii:</u></font></b><br>
+<b><font size="+1">-daca mai multe elemente din lista sun configurate cu * , atunci spatiul disponibil ramas pentru ele se va imparti in mod egal.</font></b>
+<b><font size="+1"> - o subfereastra poate fi un cadru (folosind <textarea cols="6" rows="1"><frame></textarea>) in care se va incarca un document HTML, sau poate fi impartita la randul ei la alte subfereste (folosind <textarea cols="9" rows="1"><frameset></textarea>)</font></b><br>
+<img src="imgi/image1.jpg" alt="IMAGINE"><br>
+<img src="imgi/image2.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1">In exemplul urmator este creata o pagina Web cu trei cadre orizontale. Pentru al doilea cadru valoarea atributului src este adresa URL a unei imagini.</font></b><br>
+<br>
+<br>
+<img src="imgi/image3.jpg" alt="IMAGINE"><br>
+<img src="imgi/image4.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1">In exemplul urmator este creata o matrice de 4 cadre (2 X 2).</font></b><br>
+<br>
+<img src="imgi/image5.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image6.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1">In exemplul urmator este creata o pagina Web cu trei cadre mixte. Pentru a o crea, se procedeaza din aproape in aproape. Mai intai, pagina este impartita in doua subferestre de tip coloana, dupa care a doua subfereastra 
+este impartita in doua subferestre de tip linie.</font></b><br>
+<br>
+<img src="imgi/image7.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image8.jpg" alt="IMAGINE"><br>
+<br>
+<b><font size="+1">In exemplul urmator pagina Web este construita cu ajutorul a doua fisiere HTML ( pagina este identica cu cea anterioara)</font></b><br>
+<br>
+<img src="imgi/image9.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image10.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<img src="imgi/image11.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1"><u>Culori pentru chenarele cadrelor si dimensionarea chenarului unui cadru</u></font></b><br>
+<br>
+<b><font size="+1">Pentru a stabili culoarea chenarului unui cadru se utilizeaza atributul bordercolor. Acest atribut primeste ca valoare un nume de culoare sau o culoare definita in conformitate cu modelul de culoare RGB. 
+Atributul bordercolor poate fi atasat atat etichetei <textarea cols="9" rows="1"><frameset></textarea> pentru a stabili culoarea tuturor chenarelor cadrelor incluse, cat si etichetei <textarea cols="6" rows="1"><frame></textarea> pentru a stabili culoarea chenarului pentru un cadru individual.</font></b><br>
+<br>
+<img src="imgi/image12.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image13.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1">Atributul border al etichetei <textarea cols="9" rows="1"><frameset></textarea> permite configurarea latimii chenarelor tuturor cadrelor la un numar dorit de pixeli.</font></b><br>
+<br>
+<b><font size="+1">Valoarea prestabilita a atributului border este de 5 pixeli.</font></b><br>
+<b><font size="+1">O valoare de 0 pixeli va defini un cadru fara chenar.</font></b><br>
+<br>
+<img src="imgi/image14.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image15.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1">In exemplul urmator se utilizeaza border = "0"  pentru a obtine cadre fara chenar.</font></b><br>
+<br>
+<img src="imgi/image16.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image17.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+<b><font size="+1">In mod prestabilit, chenarul unui cadru este afisat si are aspect tridimensional. Afisarea chenarului unui cadru se poate dezactiva daca se utilizeaza atributul frameborder cu valoare "no". Acest atribut poate fi atasat atat etichetei <textarea cols="9" rows="1"><frameset></textarea> (dezactivarea fiind valabila 
+pentru toate cadrele incluse) cat si etichetei <textarea cols="6" rows="1"><frame></textarea> (dezactivarea fiind valabila numai pentru un singur cadru). Valorile posibile ale atributului frameborder sunt:</font></b><br>
+<b><font size="+1"> - "yes"- echivalent cu 1;</font></b><br>
+<b><font size="+1"> - "no"  -echivalent cu 0;</font></b><br>
+<br>
+<img src="imgi/image16.jpg" alt="IMAGINE"><br>
+<br>
+<img src="imgi/image17.jpg" alt="IMAGINE"><br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,35 @@
+ <html>
+    <head>
+	<link href="stylefb.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+src = ["img/we.png", "img/1.png", "img/2.png", "img/3.png", "img/4.png"]
+
+durata = 4;
+
+ads=[]; ct=0;
+function schimbaAd() {
+  var n=(ct+1)%src.length;
+  if (ads[n] && (ads[n].complete || ads[n].complete==null)) {
+    document["Imagine"].src = ads[ct=n].src;
+  }
+  ads[n=(ct+1)%src.length] = new Image;
+  ads[n].src = src[n];
+  setTimeout("schimbaAd()",durata*1000);
+}
+function adLink() {
+  location.href = url[ct];
+} 
+onload = function() {
+  if (document.images)
+    schimbaAd();
+}
+</script>
+</head>
+         <body>
+		 <div class="center">
+		   <a href="javascript:adLink();" onMouseOver="status=url[ct]; return true;" onMouseOut="status=''">
+  <img name="Imagine" src="img/we.png" border="0">
+</a>
+          </body>
+ 
+    </html>
